@@ -26,5 +26,5 @@ urlpatterns = [
     url(r'^cinemas/$', CinemaListView.as_view(), name='cinema-list'),
     url(r'^cinemas/(?P<pk>\d+)/$', CinemaView.as_view(), name='cinema-detail'),
     url(r'^screening/$', ScreeningListView.as_view(), name='screening-list'),
-    url(r'^screening/(?P<pk>\d+)/$', ScreeningView.as_view(), name='cinema-detail'),
+    url(r'^screening/(?P<pk>\d+)/$', ScreeningView.as_view(), name='screening-detail'),
 ]
