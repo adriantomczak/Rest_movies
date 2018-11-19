@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'showtimes',
     'movielist',
+    'django_filters',
 ]
 
 MIDDLEWARE = [

@@ -17,13 +17,14 @@ from django.conf.urls import url
 from django.contrib import admin
 
 from movielist.views import MovieListView, MovieView
-from showtimes.views import CinemaListView, CinemaView, ScreeningListView
+from showtimes.views import CinemaListView, CinemaView, ScreeningListView, ScreeningView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^movies/$', MovieListView.as_view()),
+    url(r'^movies/$', MovieListView.as_view(), name='movie-list'),
     url(r'^movies/(?P<pk>[0-9]+)/$', MovieView.as_view(), name='movie-detail'),
     url(r'^cinemas/$', CinemaListView.as_view(), name='cinema-list'),
     url(r'^cinemas/(?P<pk>\d+)/$', CinemaView.as_view(), name='cinema-detail'),
-    url(r'^screening/$', ScreeningListView.as_view(), name='screening-view')
+    url(r'^screening/$', ScreeningListView.as_view(), name='screening-list'),
+    url(r'^screening/(?P<pk>\d+)/$', ScreeningView.as_view(), name='cinema-detail'),
 ]
